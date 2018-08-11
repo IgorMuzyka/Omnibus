@@ -12,7 +12,7 @@ pod 'Omnibus', :git => 'https://github.com/IgorMuzyka/Omnibus.git'
 
 ## Usage
 
-Create your module and conform to `Module`. You can also conform to `Installable`, `Uninstallable` protocols to be able to handle those events.
+***Create*** your **module** and **conform** to `Module`. You can also **conform** to `Installable`, `Uninstallable` ***protocols*** to be able to **handle** those events.
 
 ```swift
 import Omnibus
@@ -49,7 +49,7 @@ public struct MyObject {
 }
 ```
 
-Extend the `Bus`. You can also specify `Installable`, `Uninstallable` calls on `ModuleWrap` object.
+**Extend** the `Bus`. You can also **specify** `Installable`, `Uninstallable` calls on `ModuleWrap` object.
 
 ```swift
 import Omnibus
@@ -72,7 +72,7 @@ extension Bus {
 }
 ```
 
-Create the `Bus` and **install** a `Backdoor` on it
+***Create*** the `Bus` and ***install*** a `Backdoor` on it
 
 ```swift
 // somewhere in your main.swift or AppDelegate.swift
@@ -81,7 +81,7 @@ Backdoor.install(on: .common)
 
 ```
 
-And whenever you need your specific `Module` just **access** them
+And whenever you need your specific `Module` just ***access*** them
 
 ```swift
 // like this
@@ -93,20 +93,20 @@ let myFirstModuleTwo = (Backdoor.bus?.access() as MyFirstModule?)
 let myObjectTwo = ((Backdoor.bus?.access() as ModuleWrap<MyObject>?)?.unwrap() as MyObject?)
 ```
 
-And you can always **uninstall** your `Backdoor` from the `Bus` which will also destroy the `Bus` **uninstalling** all the **modules** it has.
+And you can always ***uninstall*** your `Backdoor` from the `Bus` which will also destroy the `Bus` ***uninstalling*** all the **modules** it has.
 
 ```swift
 Backdoor.uninstall(from: Backdoor.bus)
 ```
 
-If you want to just **change** your `Bus` you should
+If you want to just ***change*** your `Bus` you should
 
 ```swift
 Backdoor.uninstall(from: Backdoor.bus)
 Backdoor.install(on: someBus)
 ```
 
-You can **install** and **uninstall** modules on `Bus` at any time
+You can ***install*** and ***uninstall*** **modules** on `Bus` at any time
 
 ```swift
 let module = MyFirstModule()
@@ -116,7 +116,7 @@ Backdoor.bus?.uninstall(module)
 
 ## Author
 
-igormuzyka, igormuzyka42@gmail.com
+Igor Muzyka, igormuzyka42@gmail.com
 
 ## License
 
