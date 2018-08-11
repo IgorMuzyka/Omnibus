@@ -1,0 +1,6 @@
+use_frameworks!
+target 'Omnibus_Tests' do
+  pod 'Omnibus', :path => '../'
+  
+  
+end

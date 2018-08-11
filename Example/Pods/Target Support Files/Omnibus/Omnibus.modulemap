@@ -1,0 +1,6 @@
+framework module Omnibus {
+  umbrella header "Omnibus-umbrella.h"
+
+  export *
+  module * { export * }
+}
