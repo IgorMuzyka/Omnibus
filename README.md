@@ -86,11 +86,11 @@ And whenever you need your specific `Module` just ***access*** them
 ```swift
 // like this
 let myFirstModuleOne: MyFirstModule? = Backdoor.bus?.access()
-let myObjectOne: MyObject? = (Backdoor.bus?.access() as ModuleWrap<MyObject>?)?.unwrap()
+let myObjectOne: MyObject? = Backdoor.bus?.access()
 
 // or like this
-let myFirstModuleTwo = (Backdoor.bus?.access() as MyFirstModule?)
-let myObjectTwo = ((Backdoor.bus?.access() as ModuleWrap<MyObject>?)?.unwrap() as MyObject?)
+let myFirstModuleTwo = Backdoor.bus?.access() as MyFirstModule?
+let myObjectTwo = Backdoor.bus?.access() as MyObject?
 ```
 
 And you can always ***uninstall*** your `Backdoor` from the `Bus` which will also destroy the `Bus` ***uninstalling*** all the **modules** it has.
