@@ -114,7 +114,7 @@ Backdoor.bus?.install(module)
 Backdoor.bus?.uninstall(module)
 ```
 
-Since the `Bus` is `Module` you can place it any `Bus` as long as you have a ***unique*** **instance** ***inheriting*** from `Bus`
+Since the `Bus` is `Module` you can place it on any `Bus` as long as you have a ***unique*** **instance** ***inheriting*** from `Bus`
 
 ````swift
 public class MySubBus: Bus {}
