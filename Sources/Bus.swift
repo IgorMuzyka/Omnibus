@@ -2,7 +2,7 @@
 open class Bus: Module, AccessInterface, BusInterface {
 
 	public weak var bus: Bus?
-	fileprivate var modules = [String: Module]()
+	internal var modules = [String: Module]()
 
 	public init() {
 		bus = self
